@@ -3,7 +3,7 @@ from collections import defaultdict
 
 def a_star(start, goal, graph, heuristics):
     # For the open list, we use a heap queue to store the nodes with the lowest f(n) value at the top (priority queue)
-    # ( f(n), node, path, g(n) )
+    # ( f(n), node, g(n), path )
     open_list = []
     heapq.heappush(open_list, (heuristics[start], start, 0, [start]))
 
@@ -55,7 +55,13 @@ graph = {
     'DE': { 'FI': 19, 'NL': 6 }
 }
 
-path, cost = a_star("PT", "FI", graph, heuristics)
+start = 'PT'
+goal = 'FI'
 
-print(f'Path: {" > ".join(path)}')
-print(f'Cost: {cost}')
+path, cost = a_star(start, goal, graph, heuristics)
+
+if path is not None:
+    print(f'Path: {" > ".join(path)}')
+    print(f'Cost: {cost}')
+else:
+    print('No path found')

@@ -31,7 +31,7 @@ flowchart LR
   style FI stroke:#FA0,stroke-width:2px;
 ```
 
-**Tabela de heurísticas para chegar ao destino:**
+**Heuristic `h(n)`**
 
 | Origem | Cidade      | `h(n)` |
 |--------|-------------|--------|
