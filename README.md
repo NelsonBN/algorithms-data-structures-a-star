@@ -55,7 +55,7 @@ flowchart LR
 - Movement custs:
   - `100` for orthogonal movement
   - `141` for diagonal movement
-  - Heuristic `h(n)` is the manhattan distance to the goal
+- Heuristic `h(n)` is the manhattan distance to the goal
 
 ## References
 - [Other algoritmos & Data Structures](https://github.com/NelsonBN/algorithms-data-structures)
