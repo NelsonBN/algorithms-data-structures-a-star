@@ -3,6 +3,8 @@
 
 ## Demo
 
+### Using a graph
+
 [Find the shortest path between two cities](./src/a-start-graph.py)
 
 ```mermaid
@@ -45,6 +47,15 @@ flowchart LR
 | FI     | Finlândia   | 0      |
 
 
+### Using a grid (matrix)
+[Find the shortest path in a maze](./src/a-start-matrix.py)
+
+![Maze](./media/maze.svg)
+
+- Movement custs:
+  - `100` for orthogonal movement
+  - `141` for diagonal movement
+  - Heuristic `h(n)` is the manhattan distance to the goal
 
 ## References
 - [Other algoritmos & Data Structures](https://github.com/NelsonBN/algorithms-data-structures)

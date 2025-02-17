@@ -11,16 +11,16 @@ def a_star(start, goal, graph, heuristics):
 
     while open_list:
         # Pop the node with the lowest f(n) from the open list
-        _, current, g_cost_parent, path = heapq.heappop(open_list)
+        _, current_node, g_cost_parent, path = heapq.heappop(open_list)
 
         # If the current node is the goal, we return the path and the cost
-        if current == goal:
+        if current_node == goal:
             return path, g_cost_parent
 
-        close_list[current] = g_cost_parent
+        close_list[current_node] = g_cost_parent
 
         # Explore the neighbors of the current node
-        for neighbor, move_cost in graph.get(current, {}).items():
+        for neighbor, move_cost in graph.get(current_node, {}).items():
             g_score = g_cost_parent + move_cost
 
             f_cost_closed = close_list[neighbor]
@@ -28,8 +28,8 @@ def a_star(start, goal, graph, heuristics):
                 heuristic = heuristics[neighbor]
                 f_cost = g_score + heuristic
                 # Create the path to the neighbor
-                path = path + [neighbor]
-                heapq.heappush(open_list, (f_cost, neighbor, g_score, path))
+                new_path = path.copy() + [neighbor]
+                heapq.heappush(open_list, (f_cost, neighbor, g_score, new_path))
 
     # No path found
     return None
