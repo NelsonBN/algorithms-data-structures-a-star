@@ -53,8 +53,8 @@ flowchart LR
 ![Maze](./media/maze.svg)
 
 - Movement custs:
-  - `100` for orthogonal movement
-  - `141` for diagonal movement
+  - `100` for orthogonal movement (⬅️ ➡️ ⬆️ ⬇️)
+  - `141` for diagonal movement (↖️ ↗️ ↘️ ↙️)
 - Heuristic `h(n)` is the manhattan distance to the goal
 
 ## References
