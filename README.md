@@ -58,5 +58,5 @@ flowchart LR
 - Heuristic `h(n)` is the manhattan distance to the goal
 
 ## References
-- [Other algoritmos & Data Structures](https://github.com/NelsonBN/algorithms-data-structures)
+- [Other Algorithms & Data Structures](https://github.com/NelsonBN/algorithms-data-structures)
 - [Wikipedia](https://en.wikipedia.org/wiki/A*_search_algorithm)
